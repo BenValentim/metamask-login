@@ -7,18 +7,18 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
-         Metamask RainbowKit Login
+         MetaMask RainbowKit Login
         </p>
         <div>
           <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            href="https://github.com/QuasarwayGit"
             target="_blank"
             rel="noopener noreferrer"
           >
             By: {"Quasarway"}
           </a>
         </div>
-        <ConnectButton />
+        <ConnectButton chainStatus="icon" showBalance={false} />
       </div>
 
       <div className={styles.center}>
