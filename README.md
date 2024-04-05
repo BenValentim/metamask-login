@@ -1,1 +1,1 @@
-# metamask-login
+# MetaMask RainbowKit login
