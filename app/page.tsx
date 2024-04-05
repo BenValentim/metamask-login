@@ -26,15 +26,12 @@ export default function Home() {
         const response = await axios.post(`${process.env.NEXT_PUBLIC_BASE_APP_URL}/api/user/getSignMessage`);
         const message = response.data.message;
         const signature = await signer.signMessage(message);
-        console.log('signature', signature);
 
         const authResponse = await axios.post(`${process.env.NEXT_PUBLIC_BASE_APP_URL}/api/user/auth`, {
           address,
           message,
           signature
         });
-
-        console.log('authResponse', authResponse);
 
         if (authResponse.data.status) {
           setAuthMessage('Permission is granted');
